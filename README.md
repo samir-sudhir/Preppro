@@ -57,6 +57,64 @@ frontend/            # Next.js frontend
 
 ---
 
+## 🧬 Clone and Set Up from GitHub
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/preppro.git
+   cd preppro
+   ```
+
+2. **Create and activate a virtual environment:**
+   ```bash
+   python3 -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
+
+3. **Install backend dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up environment variables**:
+   Create a `.env` file in the root directory with the following content:
+
+   ```env
+   # .env file
+
+   SECRET_KEY=your_django_secret_key
+   DEBUG=True
+
+   DB_NAME=preppro_db
+   DB_USER=postgres
+   DB_PASSWORD=your_postgres_password
+   DB_HOST=localhost
+   DB_PORT=5432
+
+   EMAIL_HOST=sandbox.smtp.mailtrap.io
+   EMAIL_HOST_USER=your_mailtrap_user
+   EMAIL_HOST_PASSWORD=your_mailtrap_password
+   EMAIL_PORT=2525
+   FROM_EMAIL=example@example.com
+
+   FRONTEND_APP_URL=http://127.0.0.1:3000
+
+   RAPIDAPI_KEY=your_rapidapi_key
+   ```
+
+   > 🔒 Do **not** commit this file. Ensure `.env` is listed in `.gitignore`.
+
+5. **Install frontend dependencies:**
+   ```bash
+   cd frontend
+   npm install
+   cd ..
+   ```
+
+6. **Continue with the [PostgreSQL Setup](#postgresql-setup)**.
+
+---
+
 ## ⚙️ Getting Started
 
 ### PostgreSQL Setup
@@ -107,23 +165,12 @@ frontend/            # Next.js frontend
 
 ### Backend (Django)
 
-1. **Create and activate a virtual environment**:
-   ```bash
-   python3 -m venv env
-   source env/bin/activate  # On Windows: env\Scripts\activate
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run migrations**:
+1. **Run migrations**:
    ```bash
    python manage.py migrate
    ```
 
-4. **Start the development server**:
+2. **Start the development server**:
    ```bash
    python manage.py runserver
    ```
@@ -132,18 +179,13 @@ frontend/            # Next.js frontend
 
 ### Frontend (Next.js)
 
-1. **Navigate to frontend and install dependencies**:
+1. **Navigate to frontend and start the server**:
    ```bash
    cd frontend
-   npm install
-   ```
-
-2. **Start the development server**:
-   ```bash
    npm run dev
    ```
 
-3. **Visit**:
+2. **Visit**:
    ```
    http://localhost:3000
    ```
