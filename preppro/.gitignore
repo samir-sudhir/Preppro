@@ -1,0 +1,31 @@
+# Python
+*.pyc
+__pycache__/
+
+# Django
+*.sqlite3
+db.sqlite3
+
+# Virtual environment
+venv/
+
+# Secrets
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Static files (collected)
+staticfiles/
+
+# Media files (uploads)
+media/
+
+# Pytest cache
+.pytest_cache/
+
+# Django Migrations
+# (Optional: only if you don't want to track them)
+# **/migrations/*.py
+# **/migrations/*.pyc

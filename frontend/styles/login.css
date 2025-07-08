@@ -1,0 +1,56 @@
+/* FYP/frontend/styles/login.css */
+body {
+  background-color: #fff7d1;
+  font-family: "Arial", sans-serif;
+}
+
+.logo {
+  position: absolute;
+  top: 20px; /* Adjusted for better visibility */
+  left: 20px; /* Adjusted for better visibility */
+  max-width: 150px; /* Set a reasonable size */
+  height: 7.7rem; /* Maintain aspect ratio */
+  z-index: 1000; /* Ensure the logo is above other elements */
+  border-radius: 8px; /* Rounded corners for video */
+}
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  margin-top: 100px; /* Space from the top */
+}
+
+.btn-primary {
+  background-color: #8b5dff;
+  border: none;
+  border-radius: 5px; /* Rounded button */
+  padding: 10px; /* Button padding */
+  font-size: 16px; /* Button text size */
+}
+
+.btn-primary:hover {
+  background-color: #7a4bc4; /* Darker shade on hover */
+}
+
+img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  border-radius: 12px; /* Rounded corners for image */
+}
+
+.form-label {
+  font-weight: bold; /* Make labels bold */
+}
+
+a {
+  color: #8b5dff; /* Link color */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
