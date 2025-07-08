@@ -59,19 +59,65 @@ frontend/            # Next.js frontend
 
 ## ⚙️ Getting Started
 
+### PostgreSQL Setup
+
+1. **Install PostgreSQL** (if not already installed):
+   - On macOS (Homebrew):
+     ```bash
+     brew install postgresql
+     ```
+   - On Ubuntu/Debian:
+     ```bash
+     sudo apt update
+     sudo apt install postgresql postgresql-contrib
+     ```
+
+2. **Start PostgreSQL service**:
+   ```bash
+   sudo service postgresql start
+   ```
+
+3. **Create a database and user**:
+   ```bash
+   sudo -u postgres psql
+   CREATE DATABASE preppro_db;
+   CREATE USER preppro_user WITH PASSWORD 'your_password';
+   ALTER ROLE preppro_user SET client_encoding TO 'utf8';
+   ALTER ROLE preppro_user SET default_transaction_isolation TO 'read committed';
+   ALTER ROLE preppro_user SET timezone TO 'UTC';
+   GRANT ALL PRIVILEGES ON DATABASE preppro_db TO preppro_user;
+   \q
+   ```
+
+4. **Update `settings.py` in Django**:
+   ```python
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': 'preppro_db',
+           'USER': 'preppro_user',
+           'PASSWORD': 'your_password',
+           'HOST': 'localhost',
+           'PORT': '5432',
+       }
+   }
+   ```
+
+---
+
 ### Backend (Django)
 
-1. **Install dependencies:**
+1. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run migrations:**
+2. **Run migrations**:
    ```bash
    python manage.py migrate
    ```
 
-3. **Start the development server:**
+3. **Start the development server**:
    ```bash
    python manage.py runserver
    ```
@@ -80,18 +126,18 @@ frontend/            # Next.js frontend
 
 ### Frontend (Next.js)
 
-1. **Navigate to frontend and install dependencies:**
+1. **Navigate to frontend and install dependencies**:
    ```bash
    cd frontend
    npm install
    ```
 
-2. **Start the development server:**
+2. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-3. **Visit:**
+3. **Visit**:
    ```
    http://localhost:3000
    ```
