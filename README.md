@@ -61,7 +61,7 @@ frontend/            # Next.js frontend
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/preppro.git
+   git clone https://github.com/samir-sudhir/Preppro.git
    cd preppro
    ```
 
