@@ -107,17 +107,23 @@ frontend/            # Next.js frontend
 
 ### Backend (Django)
 
-1. **Install dependencies**:
+1. **Create and activate a virtual environment**:
+   ```bash
+   python3 -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
+
+2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run migrations**:
+3. **Run migrations**:
    ```bash
    python manage.py migrate
    ```
 
-3. **Start the development server**:
+4. **Start the development server**:
    ```bash
    python manage.py runserver
    ```
