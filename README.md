@@ -1,6 +1,6 @@
 # PrepPro: AI-Powered Learning Platform
 
-**PrepPro** is a full-stack, AI-powered educational platform designed to enhance personalized learning for students and streamline test and feedback management for teachers. It leverages **Django REST Framework** for the backend, **Next.js** for the frontend, and integrates with **RapidAPI Claude 3** for advanced NLP features like text summarization and automatic MCQ generation.
+**PrepPro** is a full-stack, AI-powered educational platform designed to enhance personalized learning for students and streamline test and feedback management for teachers. It leverages **Django REST Framework** for the backend, **Next.js** for the frontend, and integrates with NPL opertaions for semantic similarities like MCQs genration and **RapidAPI Claude 3** for advanced and better responses in case of fallbacks like text summarization and automatic MCQ generation.
 
 ---
 
@@ -19,6 +19,13 @@
 - **Feedback Review**: View and respond to student feedback efficiently.
 
 ---
+## 🛠️ Requirements 
+
+Node v22.11.0
+
+Python 3.12.6
+
+pip 25.0.1
 
 ## 🛠️ Tech Stack
 
