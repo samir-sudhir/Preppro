@@ -199,18 +199,6 @@ frontend/            # Next.js frontend
 
 ---
 
-## 📦 Key Dependencies
-
-### Backend
-- `django`, `djangorestframework`, `djangorestframework_simplejwt`
-- `requests`, `pandas`, `numpy`, `matplotlib`, `plotly`
-- `sentence-transformers`, `transformers`, `torch`
-
-### Frontend
-- `next`, `react`, `tailwindcss`, `axios`
-- `chart.js`, `react-chartjs-2`, `react-toastify`
-
----
 
 ## 🤝 Contribution Guide
 
